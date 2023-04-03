@@ -3,166 +3,19 @@
 
 <head>
     <title>Bíblia</title>
-    <style>
-        body {
-            background-color: #F2F2F2;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: #0072C6;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        li {
-            background-color: #FFFFFF;
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            color: #333333;
-            cursor: pointer;
-            flex-basis: calc(33.3333% - 20px);
-            margin: 10px;
-            padding: 15px;
-            text-align: center;
-            transition: all 0.2s ease-in-out;
-            vertical-align: middle;
-        }
-
-        li:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        }
-
-        li:active {
-            transform: translateY(0px);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        }
-
-        li.selected {
-            background-color: #0072C6;
-            color: #FFFFFF;
-        }
-
-        li.selected:hover {
-            background-color: #00509D;
-        }
-
-        li.selected:active {
-            background-color: #00509D;
-            transform: translateY(0px);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        }
-
-        .search {
-            margin-top: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        form {
-            display: inline-block;
-        }
-
-        label {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        input[type="text"] {
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            font-size: 16px;
-            padding: 10px;
-            width: 250px;
-            vertical-align: middle;
-        }
-
-        input[type="submit"] {
-            background-color: #0072C6;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            color: #FFFFFF;
-            cursor: pointer;
-            font-size: 16px;
-            margin-left: 10px;
-            padding: 10px;
-            vertical-align: middle;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #00509D;
-        }
-
-        .chapter-page {
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-
-        .chapter-page h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .chapter-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .chapter {
-            background-color: #0074d9;
-            border-radius: 5px;
-            color: #fff;
-            font-size: 16px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            padding: 10px;
-            text-decoration: none;
-        }
-
-        .chapter:hover {
-            background-color: #0c63a3;
-        }
-
-        .navigation-buttons {
-            display: flex;
-            justify-content: center;
-        }
-
-        .back-to-books {
-            background-color: #0074d9;
-            border-radius: 5px;
-            color: #fff;
-            font-size: 16px;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-
-        .back-to-books:hover {
-            background-color: #0c63a3;
-        }
-    </style>
+    <link rel="stylesheet" href="pagina_inicial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <h1>Bíblia</h1>
     <div class="container">
-        <div class="search">
+        <div class="search" id="inicio">
             <form>
                 <label for="book-name">Nome do livro:</label>
                 <input type="text" id="book-name" name="book-name">
@@ -170,62 +23,62 @@
             </form>
         </div>
         <ul class="book-list">
-            <li class="book" data-book="Gênesis">Gênesis</li>
-            <li class="book" data-book="Êxodo">Êxodo</li>
-            <li class="book" data-book="Levítico">Levítico</li>
-            <li class="book" data-book="Números">Números</li>
-            <li class="book" data-book="Deuteronômio">Deuteronômio</li>
-            <li class="book" data-book="Josué">Josué</li>
-            <li class="book" data-book="Juízes">Juízes</li>
-            <li class=" book" data-book="Rute">Rute</li>
-            <li class="book" data-book="1 Samuel">1 Samuel</li>
-            <li class="book" data-book="2 Samuel">2 Samuel</li>
-            <li class="book" data-book="1 Reis">1 Reis</li>
-            <li class="book" data-book="2 Reis">2 Reis</li>
-            <li class="book" data-book="1 Crônicas">1 Crônicas</li>
-            <li class="book" data-book="2 Crônicas">2 Crônicas</li>
-            <li class="book" data-book="Esdras">Esdras</li>
-            <li class="book" data-book="Neemias">Neemias</li>
-            <li class="book" data-book="Ester">Ester</li>
-            <li class="book" data-book="Jó">Jó</li>
-            <li class="book" data-book="Salmos">Salmos</li>
-            <li class="book" data-book="Provérbios">Provérbios</li>
-            <li class="book" data-book="Eclesiastes">Eclesiastes</li>
-            <li class="book" data-book="Cânticos">Cânticos</li>
-            <li class="book" data-book="Isaías">Isaías</li>
-            <li class="book" data-book="Jeremias">Jeremias</li>
-            <li class="book" data-book="Lamentações">Lamentações</li>
-            <li class="book" data-book="Ezequiel">Ezequiel</li>
-            <li class="book" data-book="Daniel">Daniel</li>
-            <li class="book" data-book="Oséias">Oséias</li>
-            <li class="book" data-book="Joel">Joel</li>
-            <li class="book" data-book="Amós">Amós</li>
-            <li class="book" data-book="Obadias">Obadias</li>
-            <li class="book" data-book="Jonas">Jonas</li>
-            <li class="book" data-book="Miquéias">Miquéias</li>
-            <li class="book" data-book="Naum">Naum</li>
-            <li class="book" data-book="Habacuque">Habacuque</li>
-            <li class="book" data-book="Sofonias">Sofonias</li>
-            <li class="book" data-book="Ageu">Ageu</li>
-            <li class="book" data-book="Zacarias">Zacarias</li>
-            <li class="book" data-book="Malaquias">Malaquias</li>
+            <li class="list" data-book="Gênesis">Gênesis</li>
+            <li class="list" data-book="Êxodo">Êxodo</li>
+            <li class="list" data-book="Levítico">Levítico</li>
+            <li class="list" data-book="Números">Números</li>
+            <li class="list" data-book="Deuteronômio">Deuteronômio</li>
+            <li class="list" data-book="Josué">Josué</li>
+            <li class="list" data-book="Juízes">Juízes</li>
+            <li class="list" data-book="Rute">Rute</li>
+            <li class="list" data-book="1 Samuel">1 Samuel</li>
+            <li class="list" data-book="2 Samuel">2 Samuel</li>
+            <li class="list" data-book="1 Reis">1 Reis</li>
+            <li class="list" data-book="2 Reis">2 Reis</li>
+            <li class="list" data-book="1 Crônicas">1 Crônicas</li>
+            <li class="list" data-book="2 Crônicas">2 Crônicas</li>
+            <li class="list" data-book="Esdras">Esdras</li>
+            <li class="list" data-book="Neemias">Neemias</li>
+            <li class="list" data-book="Ester">Ester</li>
+            <li class="list" data-book="Jó">Jó</li>
+            <li class="list" data-book="Salmos">Salmos</li>
+            <li class="list" data-book="Provérbios">Provérbios</li>
+            <li class="list" data-book="Eclesiastes">Eclesiastes</li>
+            <li class="list" data-book="Cânticos">Cânticos</li>
+            <li class="list" data-book="Isaías">Isaías</li>
+            <li class="list" data-book="Jeremias">Jeremias</li>
+            <li class="list" data-book="Lamentações">Lamentações</li>
+            <li class="list" data-book="Ezequiel">Ezequiel</li>
+            <li class="list" data-book="Daniel">Daniel</li>
+            <li class="list" data-book="Oséias">Oséias</li>
+            <li class="list" data-book="Joel">Joel</li>
+            <li class="list" data-book="Amós">Amós</li>
+            <li class="list" data-book="Obadias">Obadias</li>
+            <li class="list" data-book="Jonas">Jonas</li>
+            <li class="list" data-book="Miquéias">Miquéias</li>
+            <li class="list" data-book="Naum">Naum</li>
+            <li class="list" data-book="Habacuque">Habacuque</li>
+            <li class="list" data-book="Sofonias">Sofonias</li>
+            <li class="list" data-book="Ageu">Ageu</li>
+            <li class="list" data-book="Zacarias">Zacarias</li>
+            <li class="list" data-book="Malaquias">Malaquias</li>
         </ul>
         <div class="chapter-page">
             <h1>Gênesis</h1>
             <div class="chapter-list">
-                <a class="chapter" href="#">Capítulo 1</a>
-                <a class="chapter" href="#">Capítulo 2</a>
-                <a class="chapter" href="#">Capítulo 3</a>
-                <a class="chapter" href="#">Capítulo 4</a>
-                <a class="chapter" href="#">Capítulo 5</a>
-                <a class="chapter" href="#">Capítulo 6</a>
-                <a class="chapter" href="#">Capítulo 7</a>
-                <a class="chapter" href="#">Capítulo 8</a>
-                <a class="chapter" href="#">Capítulo 9</a>
-                <a class="chapter" href="#">Capítulo 10</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 1</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 2</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 3</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 4</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 5</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 6</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 7</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 8</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 9</a>
+                <a class="list" href="/esboco/pagina_versiculos.html">Capítulo 10</a>
             </div>
             <div class="navigation-buttons">
-                <a class="back-to-books" href="#">Voltar para lista de livros</a>
+                <a class="back-to-books" href="#inicio">Voltar para lista de livros</a>
             </div>
         </div>
     </div>

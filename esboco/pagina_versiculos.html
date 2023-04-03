@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualização de Versículos da Bíblia</title>
+    <link rel="stylesheet" href="pagina_versiculos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/esboco/pagina_inicial.html" class="button button-back">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <div id="verse-info">
+            <div class="verse-info-content">
+                <h2 class="book-title">Gênesis</h2>
+                <h3 class="chapter-title">Capítulo 1</h3>
+            </div>
+        </div>
+        <button class="button hide-info">
+            <i class="fas fa-times"></i>
+        </button>
+    </header>
+    <main class="container">
+        <div class=" search-box">
+            <input type="text" placeholder="Buscar versículos...">
+            <button class="button button-search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <ul class="list-group verse-list">
+            <li class="list-group-item verse-item">
+                <span class="verse-number">1.</span>
+                <span class="verse-text">Livro da geração de Jesus Cristo, filho de Davi, filho de Abraão.</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">2.</span>
+                <span class="verse-text">Abraão gerou a Isaque; Isaque gerou a Jacó; Jacó gerou a Judá e a seus
+                    irmãos;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">3.</span>
+                <span class="verse-text">Judá gerou, de Tamar, a Perez e a Zerá; Perez gerou a Esrom; Esrom gerou a
+                    Arão;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">4.</span>
+                <span class="verse-text">Arão gerou a Aminadab; Aminadab gerou a Naassom; Naassom gerou a Salmon;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">5.</span>
+                <span class="verse-text">Salmon gerou, de Raabe, a Boaz; Boaz gerou, de Rute, a Obede; Obede gerou a
+                    Jessé;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">6.</span>
+                <span class="verse-text">Jessé gerou ao rei Davi. Davi gerou a Salomão, da que fora mulher de
+                    Urias;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">7.</span>
+                <span class="verse-text">Salomão gerou a Roboão; Roboão gerou a Abias; Abias gerou a Asa;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">8.</span>
+                <span class="verse-text">Asa gerou a Josafá; Josafá gerou a Jorão; Jorão gerou a Uzias;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">9.</span>
+                <span class="verse-text">Uzias gerou a Jotão; Jotão gerou a Acaz; Acaz gerou a Ezequias;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">10.</span>
+                <span class="verse-text">Ezequias gerou a Manassés; Manassés gerou a Amom; Amom gerou a Josias;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">11.</span>
+                <span class="verse-text">Josias gerou a Jeconias e a seus irmãos, no tempo do cativeiro em
+                    Babilônia.</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">12.</span>
+                <span class="verse-text">Depois do cativeiro em Babilônia, Jeconias gerou a Salatiel; Salatiel gerou a
+                    Zorobabel;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">13.</span>
+                <span class="verse-text">Zorobabel gerou a Abiúde; Abiúde gerou a Eliaquim; Eliaquim gerou a
+                    Azor;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">14.</span>
+                <span class="verse-text">Azor gerou a Sadoque; Sadoque gerou a Aquim; Aquim gerou a Eliúde;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">15.</span>
+                <span class="verse-text">Eliúde gerou a Eleazar; Eleazar gerou a Matã; Matã gerou a Jacó;</span>
+            </li>
+            <li class="list-group-item verse-item">
+                <span class="verse-number">16.</span>
+                <span class="verse-text">e Jacó gerou a José, marido de Maria, da qual nasceu Jesus, que se chama o
+                    Cristo.</span>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <button class="button button-highlight">
+            <i class="far fa-star"></i>
+        </button>
+        <button class="button button-note">
+            <i class="far fa-edit"></i>
+        </button>
+        <button class="button button-settings">
+            <i class="fas fa-cog"></i>
+        </button>
+    </footer>
+    <script src="https://kit.fontawesome.com/your-code.js"></script>
+    <script src="/esboco/pagina_versiculos.js"></script>
+</body>
+
+</html>

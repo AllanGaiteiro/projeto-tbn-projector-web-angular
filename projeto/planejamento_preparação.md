@@ -8,6 +8,7 @@ Essa aplicação web permite projetar trechos da Bíblia em um projetor durante 
 
 - HTML
 - Bootstrap
+- Firebase
 
 ## Funcionalidades Implementadas
 
@@ -32,11 +33,13 @@ Aqui está a tela inicial do aplicativo da Bíblia:
 
 Aqui está a tela de visualização de versículos da Bíblia:
 
-- Informações do livro, capítulo e versículo selecionados;
-- Lista de versículos do capítulo selecionado;
+- Botão para voltar à tela inicial;
+- Informações do livro, capítulo e versículo selecionados em uma card fixo na tela;
+- adicionar um botão que deixa o card de visualização de livro e capitulo invisivel;
 - Barra de pesquisa para buscar versículos por palavras-chave;
+- Lista de versículos do capítulo selecionado;
 - Botão de destaque e anotação (ficarão para uma versão futura);
-- Botão para voltar à tela inicial.
+- Botão de configurações fixo no canto direito inferior, user um icon do font awesome;
 
 **ESBOCO**:
 
