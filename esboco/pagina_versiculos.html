@@ -109,6 +109,114 @@
                     Cristo.</span>
             </li>
         </ul>
+
+        <div class="popup" id="settings-popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h3 class="popup-title">Configurações</h3>
+
+                    <button class="button pop-up-hiden">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="popup-body">
+                    <label for="translation-select">Tradução:</label>
+                    <select id="translation-select">
+                        <option value="default">Padrão</option>
+                        <option value="nvi">Nova Versão Internacional (NVI)</option>
+                        <option value="arc">Almeida Revista e Corrigida (ARC)</option>
+                    </select>
+                    <label for="font-size-select">Tamanho da Letra:</label>
+                    <select id="font-size-select">
+                        <option value="16px">Padrão</option>
+                        <option value="14px">14px</option>
+                        <option value="18px">18px</option>
+                    </select>
+                    <label for="feedback-textarea">Feedback:</label>
+                    <textarea id="feedback-textarea" rows="5"></textarea>
+                    <button class="button-primary">Enviar Feedback</button>
+                </div>
+            </div>
+        </div>
+        <style>
+            /* Popup styles */
+            #settings-popup {
+                position: fixed;
+                z-index: 999;
+                bottom: 1rem;
+                left: 5rem;
+                display: none;
+            }
+
+            .popup-content {
+                background-color: #fff;
+                max-width: 500px;
+                width: 90%;
+                padding: 20px;
+                margin: auto;
+                border-radius: 10px;
+            }
+
+            .popup-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .popup-title {
+                font-size: 24px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .button-close {
+                font-size: 24px;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .popup-body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            label {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            select,
+            textarea {
+                font-size: 16px;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+            }
+
+            .button-primary {
+                background-color: #0074d9;
+                color: #fff;
+                font-size: 18px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            /* Show popup when button is clicked */
+            .show-popup {
+                display: flex;
+            }
+
+            /* Hide scrollbar on body when popup is open */
+            body.show-popup {
+                overflow: hidden;
+            }
+        </style>
     </main>
     <footer>
         <button class="button button-highlight">
@@ -117,7 +225,7 @@
         <button class="button button-note">
             <i class="far fa-edit"></i>
         </button>
-        <button class="button button-settings">
+        <button class="button button-settings pop-up-hiden">
             <i class="fas fa-cog"></i>
         </button>
     </footer>
