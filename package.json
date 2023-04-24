@@ -1,0 +1,8 @@
+{
+  "name": "tbn-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start:front": "cd front && npm start"
+  }
+}
